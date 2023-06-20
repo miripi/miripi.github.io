@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // Import pre-styling-overrides hook and style-partials.
-@use 'abstracts';
-@use 'base';
-@use 'layout';
-@use 'components';
+@import 'abstracts';
+@import 'base';
+@import 'layout';
+@import 'components';

@@ -14,7 +14,7 @@
       position: absolute;
       top: 26px;
       bottom: -6px;
-      left: calc($gutter*-2 + 9px);
+      left: calc((#{$gutter})*-2 + 9px);
     }
 
     &::after {

@@ -8,8 +8,8 @@
   display: inline-block;
   font-size: $font-size-small;
   line-height: $font-size-small;
-  margin: calc($gutter/2);
-  padding: calc($gutter/2);
+  margin: $gutter * .5;
+  padding: $gutter * .5;
   transition: background-size .35s linear;
 
   &:visited {

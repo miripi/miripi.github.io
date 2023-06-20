@@ -22,7 +22,7 @@
 
   .footer-col__item {
     display: block;
-    padding-bottom: calc($gutter / 4);
+    padding-bottom: $gutter * .25;
 
     &--link {
       color: $color-background;
