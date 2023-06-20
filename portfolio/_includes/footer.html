@@ -1,0 +1,38 @@
+<footer class="site-footer grid__footer">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div class="flex-content footer-content">
+      <div class="footer-col footer-content__copy">
+        <h2>Skills and tools</h2>
+        <ul>
+          <li class="footer-col__item">HTML5 + CSS3 + SASS</li>
+          <li class="footer-col__item">Adobe XD</li>
+          <li class="footer-col__item">Photoshop + Illustrator</li>
+          <li class="footer-col__item">Velocity Language Template</li>
+          <li class="footer-col__item">Liferay (6.2, DXP)</li>
+          <li class="footer-col__item">Angular</li>
+        </ul>
+      </div>
+  
+      <div class="footer-col footer-content__sidebar">
+        <h2>Contact & follow</h2>
+        <ul>
+          {% if site.author.email -%}
+            <li><a class="footer-col__item footer-col__item--link" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+          {% if site.linkedin_url -%}
+            <li><a class="footer-col__item footer-col__item--link" href="{{ site.linkedin_url }}" target="_blank">LinkedIn</a></li>
+          {%- endif %}
+          {% if site.instagram_url -%}
+            <li><a class="footer-col__item footer-col__item--link" href="{{ site.instagram_url }}" target="_blank">Instagram</a></li>
+          {%- endif %}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="site-footer__copyright"><small>© 2023</small></div>
+  </div>
+</footer>
+
+

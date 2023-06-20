@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+.timeline {
+  list-style: none;
+  padding-left: $gutter * 2;
+
+  &__item {
+    padding-bottom: $gutter * 1.5;
+    position: relative;
+
+    &::before {
+      border: 1px solid rgba($color-secondary, .3);
+      content: '';
+      position: absolute;
+      top: 26px;
+      bottom: -6px;
+      left: calc($gutter*-2 + 9px);
+    }
+
+    &::after {
+      background: rgba($color-secondary, .3);
+      border-radius: 50%;
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: -$gutter * 2;
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &__item:last-child::before {
+    display: none;
+  }
+}

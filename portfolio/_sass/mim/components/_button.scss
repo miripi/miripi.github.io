@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.button {
+  @include gradient();
+
+  background-size: 100%;
+  color: $color-background;
+  display: inline-block;
+  font-size: $font-size-small;
+  line-height: $font-size-small;
+  margin: calc($gutter/2);
+  padding: calc($gutter/2);
+  transition: background-size .35s linear;
+
+  &:visited {
+    color: $color-background;
+  }
+
+  &:hover {
+    background-size: 400%;
+    color: $color-background;
+    text-decoration: none;
+    transition: background-size .35s linear;
+  }
+
+  .filter & {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &--secondary {
+    @include inset-border($color-text, 2px);
+    background: $color-background;
+    color: $color-text;
+    transition: all .35s linear;
+
+    &:visited {
+      color: $color-text;
+    }
+
+    &:hover {
+      @include inset-border($color-primary, 4px);
+      color: $color-primary;
+      transition: all .35s linear;
+    }
+  }
+
+  &--small {
+    font-size: $font-size-small *.75;
+    padding: $gutter * .33;
+  }
+}

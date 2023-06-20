@@ -1,0 +1,62 @@
+@use 'variables' as *;
+
+// Mixin for media queries
+
+@mixin media-query-max($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin media-query-min($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+// Mixin to add gradient
+
+@mixin gradient() {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(133deg, $color-primary, $color-secondary);
+}
+
+// Mixin to add text gradient
+
+@mixin text-gradient {
+  @include gradient();
+
+  background-size: 0%;
+  background-color: $color-text;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+// Mixin to add image gradient
+
+@mixin image-gradient($image) {
+  @include gradient();
+
+  background-position: center top;
+  background-image: linear-gradient(133deg, rgba($color-primary, .75), rgba($color-secondary, .75)), url($image);
+}
+
+// Mixin to add icon style
+
+@mixin icon-style {
+  font-family: $font-family-heading;
+  line-height: $line-height-h1;
+}
+
+
+// Mixin to add 'real' inset border
+@mixin inset-border($color, $size) {
+  box-shadow: inset 0 0 0 $size $color;
+  -webkit-box-shadow: inset 0 0 0 $size $color;
+  -moz-box-shadow: inset 0 0 0 $size $color;
+}

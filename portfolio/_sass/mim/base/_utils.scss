@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+// Alignment
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Flex
+
+.flex-content {
+  display: flex;
+  justify-content: space-between;
+
+  @include media-query-max($width-device) {
+    flex-direction: column;
+    gap: $gutter;
+  }
+}

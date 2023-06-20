@@ -1,0 +1,126 @@
+@use '../abstracts' as *;
+
+.showcase {
+
+  @include media-query-min($width-device) {
+    display: grid;
+    gap: $gutter * .5;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(100px, 1fr);
+    grid-template-areas: 
+    "showcase__img1 showcase__img2 showcase__img3 showcase__img3"
+    "showcase__img4 showcase__img5 showcase__img5 showcase__img6"
+    "showcase__img4 showcase__img7 showcase__img8 showcase__img6";
+    margin-top: $gutter;
+
+    &__item {
+      opacity: .3;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::after {
+        align-items: center;
+        font-size: 0;
+        padding: $gutter;
+        
+        
+  
+        background-image:
+          conic-gradient(from -135deg at 100% 0%, rgba($color-primary, .45) 90deg, rgba($color-base, 0) 0),
+          conic-gradient(from 45deg at 0 100%, rgba($color-primary, .45) 90deg, rgba($color-base, 0) 0);
+        background-position: 
+          0 0, 
+          100% 100%;
+        background-size: 0;
+        transition: background-size .85s, font-size 0s;
+      }
+  
+      &:hover::after {
+        background-size: 400%;
+        font-size: $font-size-base;
+        transition: background-size .85s, font-size 0s;
+      }
+    }
+  }
+
+  @include media-query-max($width-device) {
+    &__item {
+      display: none;
+      margin-top: $gutter;
+      overflow: hidden;
+      object-fit: cover;
+      width: 100%;
+
+      img {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      &::after {
+        align-items: end;
+        padding-bottom: $gutter * .5;
+        padding-left: 50%;
+        padding-right: $gutter * .5;
+        text-align: right;
+
+        background-image: conic-gradient(from 60deg at 0 100%, rgba($color-primary, .90) 90deg, rgba($color-base, 0) 0);
+        background-position: 0 0;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    pointer-events: none;
+
+    &::after {
+      background-repeat: no-repeat;
+      color: $color-base;
+      content: attr(title);
+      display: grid;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+
+.showcase__img1 {
+  grid-area: showcase__img1;
+}
+
+.showcase__img2 {
+  grid-area: showcase__img2;
+}
+
+.showcase__img3 {
+  grid-area: showcase__img3;
+}
+
+.showcase__img4 {
+  grid-area: showcase__img4;
+}
+
+.showcase__img5 {
+  grid-area: showcase__img5;
+}
+
+.showcase__img6 {
+  grid-area: showcase__img6;
+}
+
+.showcase__img7 {
+  grid-area: showcase__img7;
+}
+
+.showcase__img8 {
+  grid-area: showcase__img8;
+}
+

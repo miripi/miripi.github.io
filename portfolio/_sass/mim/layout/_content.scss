@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.page-content {
+  .banner {
+    background-color: $color-secondary;
+    margin-bottom: $gutter * 4;
+    padding-top: 8px;
+  }
+
+  .page-content__copy {
+    max-width: $width-copy;
+
+    .list {
+      list-style: none;
+      position: relative;
+
+      & li::before {
+        content: '-';
+        left: $gutter * -.5;
+        position: absolute;
+      }
+    }
+  }
+
+  .page-content__sidebar {
+    width: $width-copy-sidebar; 
+
+    @include media-query-max($width-device) {
+      width: 95%;
+    }
+  }
+}
+
+.page-content--full-width .page-content__copy {
+  max-width: 100%;
+}

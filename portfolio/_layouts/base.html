@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="mim-theme">
+
+  {%- include head.html -%}
+
+  <body class="grid preload">
+
+    <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPQL8RX"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {%- include sidebar.html -%}
+
+    <main class="grid__content" aria-label="Content">
+        {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

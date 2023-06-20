@@ -1,0 +1,25 @@
+// Text animation for gradient
+
+@keyframes text-animation-rev {
+  0% {
+    background-size: 100%;
+  }
+  70% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 0%;
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    background-size: 0%;
+  }
+  70% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}

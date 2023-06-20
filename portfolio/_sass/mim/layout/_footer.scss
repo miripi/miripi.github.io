@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+.grid__footer {
+  @include image-gradient('../img/footer.png');
+
+  color: $color-background;
+  margin-top: $gutter * 4;
+  padding: $gutter * 2.75 $gutter * 3.3;
+
+  @include media-query-max($width-device) {
+    padding: $gutter * 2.75 $gutter;
+  }
+}
+
+.footer-content {
+  padding-bottom: $gutter * 3.3;
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  .footer-col__item {
+    display: block;
+    padding-bottom: calc($gutter / 4);
+
+    &--link {
+      color: $color-background;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-content__copy {
+    max-width: $width-copy;
+  }
+
+  @include media-query-min($width-device) {
+    .footer-content__sidebar {
+      width: $width-copy-sidebar;
+    }
+  }
+}
+
+.site-footer__copyright {
+  text-align: right;
+}
