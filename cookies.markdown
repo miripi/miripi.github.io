@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Privacy policy
+description: Cookies declaration from cookiebot.
 menu: 
 permalink: /cookies/
 ---

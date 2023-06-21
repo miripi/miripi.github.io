@@ -2,7 +2,8 @@
 
 .page-content {
   .banner {
-    background-color: $color-secondary;
+    @include gradient();
+
     margin-bottom: $gutter * 4;
     padding-top: 8px;
   }

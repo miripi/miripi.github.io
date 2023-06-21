@@ -1,6 +1,7 @@
 ---
 layout: two-columns
 title: My work background
+description: I’m a experienced web designer with a clear understanding of modern technologies and best design practices.
 menu: main
 navigation-title: WORK EXPERIENCE
 permalink: /work-experience/

@@ -1,6 +1,7 @@
 ---
 layout: full-width
 title: 
+description: This is a sample of the personal projects that I have done, such as lettering, sketchnoting and app development
 menu: main
 navigation-title: PERSONAL PROJECTS
 permalink: /personal-projects/

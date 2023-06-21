@@ -6,8 +6,8 @@
       {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
       <div class="site-title">
         <a rel="author" href="{{ "/" | relative_url }}" class="site-title__link">
-          <div>{{ site.title | escape }}</div>
-          <div>{{ site.subtitle | escape }}</div>
+          <div>{{ site.logo_title | escape }}</div>
+          <div>{{ site.logo_subtitle | escape }}</div>
         </a>
       </div>
   

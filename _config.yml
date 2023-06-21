@@ -19,8 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 
-title: Mirian
-subtitle: Durán
+title: Mirian Durán
+logo_title: Mirian
+logo_subtitle: Durán
 author:
   name: Mirian Durán
   email: miriandg86@gmail.com
@@ -40,6 +41,7 @@ linkedin_url: https://www.linkedin.com/in/mirianduran/
 #theme: jekyll-bootstrap-theme
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
